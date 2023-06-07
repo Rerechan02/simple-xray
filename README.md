@@ -49,6 +49,4 @@ wget https://raw.githubusercontent.com/Rerechan02/XRAY/main/setup.sh && chmod +x
 ✅ CHECK LOGIN USER <br>
 <br>
 
-![image](https://raw.githubusercontent.com/Rerechan02/simple-xray/main/funny2.png)
-
-<image=https://raw.githubusercontent.com/Rerechan02/simple-xray/main/funny2.png/>
+![image](https://raw.githubusercontent.com/Rerechan02/simple-xray/main/funny2.png)<br></html>
