@@ -47,3 +47,5 @@ wget https://raw.githubusercontent.com/Rerechan02/XRAY/main/setup.sh && chmod +x
 ✅ BANDWITH MONITOR <br>
 ✅ YAML LINK <br>
 ✅ CHECK LOGIN USER <br>
+<br>
+https://raw.githubusercontent.com/Rerechan02/simple-xray/main/funny2.png
