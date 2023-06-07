@@ -12,10 +12,7 @@
 <b>
 <br>
 PLEASE MAKE SURE YOUR DOMAIN SETTINGS IN YOUR CLOUDFLARE AS BELOW (SSL/TLS SETTINGS)<br>
-<br>
-1. Your SSL/TLS encryption mode is Full
-2. Enable SSL/TLS Recommender ✅
-3. Edge Certificates > Disable Always Use HTTPS (off)
+<br><br>1. Your SSL/TLS encryption mode is Full<br>2. Enable SSL/TLS Recommender ✅<br>3. Edge Certificates > Disable Always Use HTTPS (off)
 <br>
 </b>
 </b>
