@@ -17,17 +17,17 @@ PLEASE MAKE SURE YOUR DOMAIN SETTINGS IN YOUR CLOUDFLARE AS BELOW (SSL/TLS SETTI
 </b>
 </b>
 
-♦️ For Debian 10 Only For First Time Installation (Update Repo) <br>
+## For Debian 10 Only For First Time Installation (Update Repo) <br>
  
   ```html
  apt update -y && apt upgrade -y && apt dist-upgrade -y && reboot
   ```
-  ♦️ For Ubuntu 18.04 Only For First Time Installation (Update Repo) <br>
+##   For Ubuntu 18.04 Only For First Time Installation (Update Repo) <br>
   
   ```html
  apt-get update && apt-get upgrade -y && apt dist-upgrade -y && update-grub && apt install curl -y && reboot
  ```
-♦️ Installation Link<br>
+## Installation Link<br>
 
   ```html
 wget https://raw.githubusercontent.com/Rerechan02/XRAY/main/setup.sh && chmod +x setup.sh && ./setup.sh
@@ -41,8 +41,6 @@ wget https://raw.githubusercontent.com/Rerechan02/XRAY/main/setup.sh && chmod +x
 ✅ XRAY VMESS WEBSOCKET TLS & NON-TLS 443/80<br>
 ✅ XRAY VLESS WEBSOCKET TLS & NON-TLS 443/80 (SUPPORT CUSTOM PATH / WORRYFREE)<br>
 ✅ XRAY TROJAN WEBSOCKET TLS & NON-TLS 443/80<br>
-✅ XRAY TROJAN TCP XTLS 443<br>
-✅ XRAY TROJAN TCP TLS 443<br>
 <br>
 [ OTHER SERVICES ] <br>
 <br>
