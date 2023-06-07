@@ -33,7 +33,10 @@ PLEASE MAKE SURE YOUR DOMAIN SETTINGS IN YOUR CLOUDFLARE AS BELOW (SSL/TLS SETTI
 wget https://raw.githubusercontent.com/Rerechan02/XRAY/main/setup.sh && chmod +x setup.sh && ./setup.sh
   ```
 <b>
-
+<br>
+##TYPE funny To Menu All Service
+<br>
+<br>
 ## SIMPLE XRAY MULTIPORT WEBSOCKET AUTOSCRIPT DETAILS
 <b>
 [ XRAY SERVICES ] <br>
