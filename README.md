@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <h2 align="center">
- XRAY Multiport Websocket Free<br>
+  SIMPLE XRAY Multiport Websocket Free<br>
 
 <p align="center">  
   <img src="https://readme-typing-svg.herokuapp.com?color=%2336BCF7&center=true&vCenter=true&lines=Rerechan02" />  
@@ -34,7 +34,7 @@ wget https://raw.githubusercontent.com/Rerechan02/XRAY/main/setup.sh && chmod +x
   ```
 <b>
 
-## ⏩ XRAY MULTIPORT WEBSOCKET AUTOSCRIPT DETAILS ⏪
+## SIMPLE XRAY MULTIPORT WEBSOCKET AUTOSCRIPT DETAILS
 <b>
 [ XRAY SERVICES ] <br>
 <br>
