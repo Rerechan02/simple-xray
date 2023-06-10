@@ -52,4 +52,6 @@ wget https://raw.githubusercontent.com/Rerechan02/XRAY/main/setup.sh && chmod +x
 ✅ CHECK LOGIN USER <br>
 <br>
 
+<a href="https://https://t.me/fn_project" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Telegram&label=Telegram&Chanel=Click%20Here&color=blue"></a><br>
+
 ![image](https://raw.githubusercontent.com/Rerechan02/simple-xray/main/funny2.png)<br></html>
