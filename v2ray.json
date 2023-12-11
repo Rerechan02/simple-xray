@@ -1,0 +1,237 @@
+{
+  "log" : {
+    "access": "/var/log/xray/v2ray.log",
+    "error": "/var/log/xray/error1.log",
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10081,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "127.0.0.1"
+        },
+      "tag": "api"
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": "5001",
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "ac0bc3a7-26d0-4e40-b805-c0853e32da43",
+            "alterId": 0
+#vmess
+          }
+        ]
+      },
+      "streamSettings":{
+        "network": "ws",
+        "wsSettings": {
+          "path": "/praiman-vmess",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": "5002",
+      "protocol": "trojan",
+      "settings": {
+        "decryption":"none",
+        "clients": [
+          {
+            "password": "8438d5d3-397c-4dad-9c87-1c93f9a5efb7"
+#trojan
+          }
+        ]
+      },
+      "streamSettings":{
+        "network": "ws",
+        "wsSettings": {
+          "path": "/praiman-trojan",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": "5003",
+      "protocol": "shadowsocks",
+      "settings": {
+        "method": "2022-blake3-aes-256-gcm",
+        "password": "4ab0062c-7b0d-4a7e-8659-2d156db85845",
+        "clients": [
+          {
+            "password": "0ad20181-a933-4cbb-97e8-3be82d93329d"
+#shadowsocks2022
+          }
+        ],
+        "network": "tcp,udp"
+      },
+      "streamSettings":{
+        "network": "ws",
+        "wsSettings": {
+          "path": "/praiman-ss2022",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": "5004",
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "006c6d5b-2a04-4b8b-b915-5ba7429add09",
+            "alterId": 0
+#vmess-grpc
+          }
+        ]
+      },
+      "streamSettings":{
+        "network": "grpc",
+        "grpcSettings": {
+          "serviceName": "grpc-vmess",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": "5005",
+      "protocol": "trojan",
+      "settings": {
+        "decryption":"none",
+        "clients": [
+          {
+            "password": "c5c9fb2a-af62-4335-baac-3c5361a182e6"
+#trojan-grpc
+          }
+        ],
+        "udp": true
+      },
+      "streamSettings":{
+        "network": "grpc",
+        "grpcSettings": {
+          "serviceName": "grpc-trojan",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": "5006",
+      "protocol": "shadowsocks",
+      "settings": {
+        "method": "2022-blake3-aes-256-gcm",
+        "password": "8e4ce5b2-813b-476e-b54d-47480106698b",
+        "clients": [
+          {
+            "password": "5da6d87a-e2a7-4b68-9a21-d0aae7edd24e"
+#shadowsocks2022-grpc
+          }
+        ],
+        "network": "tcp,udp"
+      },
+      "streamSettings":{
+        "network": "grpc",
+        "grpcSettings": {
+          "serviceName": "grpc-ss2022",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {},
+      "tag": "blocked"
+    }
+  ],
+  "routing": {
+    "rules": [
+      {
+        "type": "field",
+        "ip": [
+          "0.0.0.0/8",
+          "10.0.0.0/8",
+          "100.64.0.0/10",
+          "169.254.0.0/16",
+          "172.16.0.0/12",
+          "192.0.0.0/24",
+          "192.0.2.0/24",
+          "192.168.0.0/16",
+          "198.18.0.0/15",
+          "198.51.100.0/24",
+          "203.0.113.0/24",
+          "::1/128",
+          "fc00::/7",
+          "fe80::/10"
+        ],
+        "outboundTag": "blocked"
+      },
+      {
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "type": "field"
+      },
+      {
+        "type": "field",
+        "outboundTag": "blocked",
+        "protocol": [
+          "bittorrent"
+        ]
+      }
+    ]
+  },
+  "stats": {},
+  "api": {
+    "services": [
+      "StatsService"
+    ],
+    "tag": "api"
+  },
+  "policy": {
+    "levels": {
+      "0": {
+        "statsUserDownlink": true,
+        "statsUserUplink": true
+      }
+    },
+    "system": {
+      "statsInboundUplink": true,
+      "statsInboundDownlink": true,
+      "statsOutboundUplink" : true,
+      "statsOutboundDownlink" : true
+    }
+  }
+}
